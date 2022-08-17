@@ -1,9 +1,17 @@
 package ArtGallery;
 
 public class Artist {
-    private String name;
+    private String artistName;
 
-    public Artist(String name){
-        this.name = name;
+    public Artist(String artistName){
+        this.artistName = artistName;
+    }
+
+    public void setArtistName(String artistName){
+        this.artistName = artistName;
+    }
+
+    public String getArtistName(){
+        return artistName;
     }
 }
