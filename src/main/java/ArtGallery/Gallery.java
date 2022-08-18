@@ -16,12 +16,12 @@ public class Gallery {
         this.stocks = new ArrayList<>(); //call the Artwork property (name from the Artwork Class)
     }
 
-    public Gallery(Customer customerName, float wallet, float till) {
-        this.stocks = new ArrayList<>();
-//        this.customerName = new customerName;
-//        this.wallet = wallet;
-        this.till = till;
-    }
+//    public Gallery(Customer customerName, float wallet, float till) {
+//        this.stocks = new ArrayList<>();
+////        this.customerName = new customerName;
+////        this.wallet = wallet;
+//        this.till = till;
+//    }
 
     public void acceptPayment(Artwork artwork) {
         this.till += artwork.getPrice();

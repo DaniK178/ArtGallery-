@@ -23,9 +23,10 @@ public class Main {
 
 
 //       Method1 calling Gallery with Customer
-//        Customer customer1 = new Customer("David",11);
-//        Gallery gallery1 = new Gallery(customer1, 3);
-//        customer1.payArtwork(2);
+        Customer customer1 = new Customer("David",11);
+        Gallery gallery1 = new Gallery("Gallery1", 3);
+        Artwork artwork1 = new Artwork("title1","sjk2ndjn",2,new Artist("artist1") );
+        customer1.payArtwork(gallery1,artwork1);
 
 
 
