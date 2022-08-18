@@ -51,10 +51,11 @@ public class CustomerTest {
         Artwork artwork  = new Artwork(TestTitle,TestNft,TestPrice,new Artist(TestArtist));
 
         float actual = customer.payArtwork(gallery,artwork);
-        float expect = 9;
+        float expect = TestWallet-TestPrice;
         assertThat(actual).isEqualTo(expect);
 
     }
+
 
 
 
