@@ -27,9 +27,6 @@ public class Customer {
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
     }
-    public void setName (String customerName) {
-        this.customerName= customerName;
-    }
 
     public void setWallet(float wallet){
         this.wallet = wallet;
@@ -44,7 +41,7 @@ public class Customer {
             this.wallet -= artwork.getPrice();
             this.stocks.add(artwork);
         }else
-            System.out.println("Maybe next time");
+            System.out.println("Maybe next time.");
                             //getPrice method in the Artwork Class
     }
 
