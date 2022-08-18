@@ -35,7 +35,7 @@ public class Customer {
 
 
 
-    public void payArtwork(Gallery gallery,Artwork artwork) {
+    public float payArtwork(Gallery gallery, Artwork artwork) {
         if (wallet >= artwork.getPrice()){
             gallery.sellArtwork(artwork);
             this.wallet -= artwork.getPrice();
@@ -43,6 +43,8 @@ public class Customer {
         }else
             System.out.println("Maybe next time.");
                             //getPrice method in the Artwork Class
+
+        return wallet;
     }
 
 
