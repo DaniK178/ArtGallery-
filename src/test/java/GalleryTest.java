@@ -9,9 +9,6 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 public class GalleryTest {
     private Gallery gallery;
     private Artwork artwork;
-}
-
-
 
     @Test
     public void canAcceptPayment(){
@@ -31,9 +28,8 @@ public class GalleryTest {
         Gallery gallery = new Gallery(TestGallery,TestTill);
         Artwork artwork  = new Artwork(TestTitle,TestNft,TestPrice,new Artist(TestArtist));
 
-        float actual = Gallery.stock_take();
+        float actual = gallery.stock_take();
         float expect = TestTill+TestPrice;
         assertThat(actual).isEqualTo(expect);
-
     }
 }
