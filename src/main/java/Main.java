@@ -22,11 +22,15 @@ public class Main {
 
 
 
-//       Method1 calling Gallery with Customer
+//       Instance Method1 calling Gallery with Customer
         Customer customer1 = new Customer("David",11);
         Gallery gallery1 = new Gallery("Gallery1", 3);
         Artwork artwork1 = new Artwork("title1","sjk2ndjn",2,new Artist("artist1") );
-        customer1.payArtwork(gallery1,artwork1);
+        System.out.println("the current balance in your account is: " + customer1.payArtwork(gallery1,artwork1));
+        gallery1.stock_take();
+        gallery1.sellArtwork(artwork1);
+
+
 
 
 

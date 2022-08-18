@@ -40,6 +40,7 @@ public class Gallery {
     public void sellArtwork(Artwork artwork){
         this.till += artwork.getPrice();
         this.stocks.remove(artwork);
+        System.out.println(till);
     }
 // extension 2
     public float stock_take() {
