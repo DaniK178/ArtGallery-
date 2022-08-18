@@ -12,7 +12,7 @@ public class GalleryTest {
 
     @Test
     public void canAcceptPayment(){
-
+        
         String TestCustomer = "A";
         float TestWallet = 10;
 
@@ -25,10 +25,12 @@ public class GalleryTest {
         float TestPrice = 1;
 
         Customer customer = new Customer(TestCustomer,TestWallet);
-        Gallery gallery = new Gallery(TestGallery,TestTill);
+//        Gallery gallery = new Gallery(TestGallery,TestTill);
         Artwork artwork  = new Artwork(TestTitle,TestNft,TestPrice,new Artist(TestArtist));
+        gallery.sellArtwork(artwork);
+        gallery.addArtwork(artwork);
 
-        float actual = gallery.stock_take();
+        float actual = gallery.currentTill();
         float expect = TestTill+TestPrice;
         assertThat(actual).isEqualTo(expect);
     }

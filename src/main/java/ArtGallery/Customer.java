@@ -32,17 +32,13 @@ public class Customer {
         this.wallet = wallet;
     }
 
-
-
-
     public float payArtwork(Gallery gallery, Artwork artwork) {
-        if (wallet >= artwork.getPrice()){
+        if (wallet >= artwork.getPrice()){  //checking the money inside wallet
             gallery.sellArtwork(artwork);
-            this.wallet -= artwork.getPrice();
+            this.wallet -= artwork.getPrice();//getPrice method in the Artwork Class
             this.stocks.add(artwork);
         }else
             System.out.println("Maybe next time.");
-                            //getPrice method in the Artwork Class
 
         return wallet;
     }

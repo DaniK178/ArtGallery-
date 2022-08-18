@@ -37,11 +37,20 @@ public class Gallery {
     }
 
 // extension 1
-    public void sellArtwork(Artwork artwork){
+    public void sellArtwork(Artwork artwork){ //
         this.till += artwork.getPrice();
         this.stocks.remove(artwork);
-        System.out.println(till);
     }
+
+    public float currentTill(){
+        float total = 0;
+        for (Artwork artwork: this.stocks){
+            total += artwork.getPrice();
+        }
+        return total;
+    }
+
+
 // extension 2
     public float stock_take() {
         float stockValue = 0;
